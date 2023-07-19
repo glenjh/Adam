@@ -50,6 +50,10 @@ public abstract class Monster : MonoBehaviour {
     {
         // 몬스터가 피해를 받을 때 동작 구현
         health-=damage;
+        if(health <= 0)
+        {
+            stateMachine.SetState(MonStateType.Die);
+        }
     }
     
     public void StartWait()

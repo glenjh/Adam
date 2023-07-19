@@ -10,7 +10,8 @@ public enum MonStateType
     Attack,
     Die
 }
-public static class MonManager {
+public static class MonManager
+{
     public static IMonState GetState(MonStateType t)
     {
         switch (t)
@@ -25,7 +26,6 @@ public static class MonManager {
                 return new MonStateDie();
             case MonStateType.Attack:
                 return new MonStateAttack();
-            
         }
         return null;
     }
