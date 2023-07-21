@@ -34,10 +34,6 @@ public class Mecha : Monster {
     public override void TakeDamage(int damage)
     {
         base.TakeDamage(damage);
-        if(health <= 0)
-        {
-            stateMachine.SetState(MonStateType.Die);
-        }
     }
 
     public void ReadyAttack()

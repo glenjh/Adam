@@ -22,6 +22,7 @@ public class MonStateMachine {
         currentState = MonManager.GetState(stateType);
         currentState.Enter(_mon);
     }
+    
 
     public void Action(Monster mon)
     {

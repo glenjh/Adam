@@ -45,7 +45,7 @@ public class MonStateIdle : IMonState
     }
 }
 
-public class MonStateMove : IMonState
+public class MonStateMove :IMonState
 {
     MonStateType _stateType;
     public MonStateType StateType => _stateType;
@@ -72,7 +72,7 @@ public class MonStateMove : IMonState
         if (rayHit.collider == null)
         {
             monster.moveSpeed *= -1;
-            monster.transform.localScale = new Vector3(-1 * monster.transform.localScale.x, monster.transform.localScale.y, monster.transform.localScale.z); 
+            monster.transform.localScale = new Vector3(-1 * monster.transform.localScale.x, monster.transform.localScale.y, monster.transform.localScale.z);
         }
         
         monster.rb.velocity = new Vector2(monster.moveSpeed, monster.rb.velocity.y);
